@@ -11,7 +11,7 @@ class Cookie_w_Chips(Cookie):
     def chip_creation(self):
         #entero ≥ 0
         max_chips = int(input("Cuántas chispas quiere agregar?"))
-        print(f"Chispas: {max_chips}")
+        return  max_chips
 
 
 class Relleno():
@@ -22,7 +22,8 @@ class Relleno():
 
 class FilledCookie(Cookie, Relleno):
     #GalletaRellena(Galleta, Relleno) que use ambos y sobrescriba mostrar_info().
-    pass
+    def fill_cookie_description(self):
+        print(f"La galleta {self.type} está rellena de {self.flavor}")
 
 
 cookie_jar = []
@@ -38,6 +39,27 @@ while key:
                     "\n6. Eliminar por nombre"
                     "\n7. Salir"
                     "\nOpcion: ")
+        match ops:
+            case "1":
+                max_cokie = int(input("Cuántas galletas agregará?"))
+                for cookie_x in range(max_cokie):
+                    temp_type = input("Coloque el tipo de galleta: ")
+                    temp_price = int(input("Coloque el precio de la galleta: "))
+                    temp_peso = int(input("Coloque el peso de la galleta: "))
+                    temp_galleta = Cookie(temp_type, temp_price, temp_peso)
+                    cookie_jar.append(temp_galleta)
+            case "2":
+                pass
+            case "3":
+                pass
+            case "4":
+                pass
+            case "5":
+                pass
+            case "6":
+                pass
+            case "7":
+                key = False
     except ValueError:
         print("XDDD")
     except Exception as e:
