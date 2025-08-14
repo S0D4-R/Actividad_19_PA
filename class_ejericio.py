@@ -4,13 +4,14 @@ class Cookie:
         self.price = price
         self.weight = weight
     def display_info(self):
-        print(f"La galleta es de tipo {self.type}|Peso: {self.weight}|Precio: {self.price}")
+        print(f"La galleta es de tipo {self.type}|Peso: {self.weight}|Precio: {self.price}", end="|")
 
 #Galleta Chispas
 class Cookie_w_Chips(Cookie):
     def chip_creation(self):
         #entero ≥ 0
-        print(f"La galleta es de tipo {self.type}|Peso: {self.weight}|Precio: {self.price}")
+        max_chips = int(input("Cuántas chispas quiere agregar?"))
+        print(f"Chispas: {max_chips}")
 
 
 class Relleno():
@@ -23,6 +24,8 @@ class FilledCookie(Cookie, Relleno):
     #GalletaRellena(Galleta, Relleno) que use ambos y sobrescriba mostrar_info().
     pass
 
+
+cookie_jar = []
 key = True
 while key:
     try:
