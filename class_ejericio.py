@@ -8,24 +8,34 @@ class Cookie:
 
 #Galleta Chispas
 class Cookie_w_Chips(Cookie):
-    pass
+    def chip_creation(self):
+        #entero ≥ 0
+        print(f"La galleta es de tipo {self.type}|Peso: {self.weight}|Precio: {self.price}")
+
+
 class Relleno():
     def __init__(self, flavor):
         self.flavor = flavor
+    def flavor_description(self):
+        pass
 
 class FilledCookie(Cookie, Relleno):
+    #GalletaRellena(Galleta, Relleno) que use ambos y sobrescriba mostrar_info().
     pass
 
 key = True
 while key:
     try:
-        ops = input("Menú con opciones:
-Registrar galleta básica
-Registrar galleta con chispas
-Registrar galleta rellena
-Listar galletas
-Buscar por nombre
-Eliminar por nombre
-Salir")
+        ops = input("-------------Menu------------\n\n"
+                    "\n1. Registrar galleta básica"
+                    "\n2. Registrar galleta con chispas"
+                    "\n3. Registrar galleta rellena"
+                    "\n4. Listar galletas"
+                    "\n5. Buscar por nombre"
+                    "\n6. Eliminar por nombre"
+                    "\n7. Salir"
+                    "\nOpcion: ")
+    except ValueError:
+        print("XDDD")
     except Exception as e:
         print("XDDD")
