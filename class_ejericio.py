@@ -49,9 +49,23 @@ while key:
                     temp_galleta = Cookie(temp_type, temp_price, temp_peso)
                     cookie_jar.append(temp_galleta)
             case "2":
-                pass
+                max_cokie = int(input("Cuántas galletas con chispas agregará? "))
+                for cookie_x in range(max_cokie):
+                    temp_type = input("Coloque el tipo de galleta: ")
+                    temp_price = int(input("Coloque el precio de la galleta: "))
+                    temp_peso = int(input("Coloque el peso de la galleta: "))
+                    temp_chips = int(input("Cuántas chispas tiene la galleta? "))
+                    temp_galleta = Cookie_w_Chips(temp_type, temp_price, temp_peso, temp_chips)
+                    cookie_jar.append(temp_galleta)
             case "3":
-                pass
+                max_cokie = int(input("Cuántas galletas rellenas agregará? "))
+                for cookie_x in range(max_cokie):
+                    temp_type = input("Coloque el tipo de galleta: ")
+                    temp_price = int(input("Coloque el precio de la galleta: "))
+                    temp_peso = int(input("Coloque el peso de la galleta: "))
+                    temp_flavor = input("Coloque el sabor del relleno: ")
+                    temp_galleta = FilledCookie(temp_type, temp_price, temp_peso, temp_flavor)
+                    cookie_jar.append(temp_galleta)
             case "4":
                 pass
             case "5":
